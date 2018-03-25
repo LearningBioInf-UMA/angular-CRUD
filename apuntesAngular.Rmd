@@ -16,18 +16,18 @@ Después ya podemos crear nuestro primer proyecto en Angular. Para este tutorial 
 
 Esto nos va a crear una carpeta con todas las dependencias de *Angular* y las dependencias de *npm*. Abrimos el proyecto en el editor de código y debemos tener lo siguiente:
 
-![*Estructura de carpetas inicial*](C:\Users\Usuario\Desktop\fotosAngular\estructCarpetas.PNG)
+![*Estructura de carpetas inicial*](./fotosAngular/estructCarpetas.PNG)
 
 Ahora vamos a probar a ejecutar para comprobar que salida obtenemos. Para ello ejecutaremos en la terminal el comando ````ng serve````.
 
 Si abrimos ahora **localhost** en el puerto *4200*, podemos ver lo siguiente:
 
-![*Prueba Proyecto*](C:\Users\Usuario\Desktop\fotosAngular\1.PNG)
+![*Prueba Proyecto*](./fotosAngular/1.PNG)
 
 
 Vamos a empezar importando las librerías que necesitamos para escribir los formularios con Angular. Entonces, nos vamos a ir a */src/app/app.module.ts*. Concretamente vamos a importar **FormsModule** tal que así: ````import{FormsModule} from '@Angular/forms'; ````. Después tendremos que añadir a los imports el **FormsModule**.
 
-![*Import*](C:\Users\Usuario\Desktop\fotosAngular\2.PNG)
+![*Import*](./fotosAngular/2.PNG)
 
 A continuación vamos a incluir **Bootstrap**. Para ello ejecutaremos dentro de la teminar ````npm i bootstrap --save````. Esto instalará dentro de nuestra carpeta *node modules* --> **bootstrap** que es donde tenemos todas las dependencias. 
 
