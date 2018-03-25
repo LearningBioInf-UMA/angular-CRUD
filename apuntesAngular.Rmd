@@ -200,4 +200,10 @@ Finalmente tenemos updatePetition() que lo que hace es coger el índice que había
 ```
 
 
+Mi CRUD quedó tal que así:
+
+
+
+![*Resultado*](./fotosAngular/resul.PNG)
+![*Resultado*](./fotosAngular/resul1.PNG)
 
