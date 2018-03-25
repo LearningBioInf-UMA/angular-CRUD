@@ -6,3 +6,5 @@ output: html_document
 ---
 
 En este pequeño tutorial se habla sobre como hacer un proyecto en **Angular** e implementar "CRUD".
+
+Importante: Para probar esta interfaz, recordar que todos los ficheros irían dentro de app excepto style.css.
