@@ -1,0 +1,187 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div class="container app">
+  <div class="row">
+    <div class="col-sm-8">
+      <h1>
+        ¡Bienvenido a tu {{ title }}!
+      </h1>
+    </div>
+    <div class="col-sm-4">
+      <div class="alert alert-success alert-dismissable" *ngIf="msg">
+        <a href="#" class="close" (click)="closeAlert()">
+          &times; 
+        </a>
+
+        {{msg}}
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-4">
+      <img width="300" height="300" alt="Angular Logo" src="https://i.pinimg.com/originals/86/dd/8b/86dd8bf8c98282ec2fa932b12ef231ae.jpg" />
+    </div>
+
+
+    <div class="col-sm-8">
+      <h2>Crear petición</h2>
+      <form class="form-horizontal">
+        <!--Añadimos el primer input-->
+        <div class="form-group">
+          <label for="name" class="control-label col-sm-2">
+            Nombre
+          </label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" id="name" 
+            name="name" [(ngModel)]="model.name" placeholder="Añade una petición" 
+            >
+            
+          </div>
+        </div>
+        
+
+        <!--Añadimos el segundo input-->
+        <div class="form-group">
+          <label for="searchtype" class="control-label col-sm-4">
+            Tipo de búsqueda
+          </label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" id="searchtype" 
+            name="searchtype" [(ngModel)]="model.searchtype" placeholder="Selecciona busqueda normal o optimizada" 
+            >
+            
+          </div>
+        </div>
+
+
+        <!--Añadimos el tercer input-->
+        <div class="form-group">
+          <label for="DBgestor" class="control-label col-sm-3">
+            Gestor de BD
+          </label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" id="DBgestor" 
+            name="DBgestor" [(ngModel)]="model.DBgestor" placeholder="Selecciona el gestor de BD: All, MariaDB, MySQL o SQLServer" 
+            >
+            
+          </div>
+        </div>
+
+        <!--Antes de cerrar el formulario vamos a agregar un boton-->
+        <div class="form-group">
+          <div class="col-sm-10 col-sm-offset-2">
+            <button type="submit" class="btn btn-success" (click)="addPetition()">Enviar</button>
+          </div>
+        </div>
+      </form>
+    </div>
+<!--Aqui vamos a añadir la tabla para ver los que tenemos guardados-->
+      
+    <div class="row">
+      <div class="col-sm-12">
+        <h2 class="text-center">Datos actuales</h2>
+         <table class="table">
+           <thead>
+             <tr>
+               <th>Item</th>
+               <th>Tipo de busqueda</th>
+               <th>Gestor de BD elegido</th>
+               <th>Acciones</th>
+             </tr>
+           </thead>
+           <tbody>
+             <tr *ngFor="let petit of petition; let i = index ">
+               <td>{{petit.name}}</td>
+               <td>{{petit.searchtype}}</td>
+               <td>{{petit.DBgestor}}</td>
+               <td>
+
+                <div class="btn-group">
+                 <a (click)="deletePetition(i)" class="btn btn-primary">
+                   Buscar
+                 </a>
+            
+                   <a (click)="editPetition(i)" class="btn btn-light">
+                     Editar
+
+                   </a>
+
+                   <a (click)="deletePetition(i)" class="btn btn-danger">
+                     Borrar
+                   </a>
+          
+                </div>
+
+               </td>
+             </tr>
+           </tbody>
+         </table>
+      </div>
+
+      
+    </div>
+    <div class="col-sm-4" [hidden]="hideUpdate">
+      <h2>Actualizar busqueda</h2>
+      <form class="form-horizontal">
+        <div class="col-sm-12">
+      
+  
+        <!--Añadimos el primer input-->
+        <div class="form-group">
+          <label for="name" class="control-label col-sm-2">
+            Nombre
+          </label>
+          <div class="col-sm-15">
+            <input type="text" class="form-control" id="name" 
+            name="name" [(ngModel)]="model2.name" placeholder="Añade una petición" 
+            >
+            
+          </div>
+        </div>
+        
+
+        <!--Añadimos el segundo input-->
+        <div class="form-group">
+          <label for="searchtype" class="control-label col-sm-12">
+            Tipo de búsqueda
+          </label>
+          <div class="col-sm-18">
+            <input type="text" class="form-control" id="searchtype" 
+            name="searchtype" [(ngModel)]="model2.searchtype" placeholder="Selecciona: normal o optimizada" 
+            >
+            
+          </div>
+        </div>
+
+
+        <!--Añadimos el tercer input-->
+        <div class="form-group">
+          <label for="DBgestor" class="control-label col-sm-8">
+            Gestor de BD
+          </label>
+          <div class="col-sm-20">
+            <input type="text" class="form-control" id="DBgestor" 
+            name="DBgestor" [(ngModel)]="model2.DBgestor" placeholder="Selecciona: All, MariaDB, MySQL o SQLServer" 
+            >
+            
+          </div>
+        </div>
+
+        <!--Antes de cerrar el formulario vamos a agregar un boton-->
+        <div class="form-group">
+          <div class="col-sm-10 col-sm-offset-2">
+            <button type="submit" class="btn btn-success" (click)="updatePetition()">Actualizar</button>
+          </div>
+        </div>
+  
+    </div>
+      </form>
+
+
+
+    </div>
+    
+  </div>
+  
+  
+</div>
+
