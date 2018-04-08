@@ -25,7 +25,7 @@ Si abrimos ahora **localhost** en el puerto *4200*, podemos ver lo siguiente:
 ![*Prueba Proyecto*](./fotosAngular/1.PNG)
 
 
-Vamos a empezar importando las librerías que necesitamos para escribir los formularios con Angular. Entonces, nos vamos a ir a */src/app/app.module.ts*. Concretamente vamos a importar **FormsModule** tal que así: ````import{FormsModule} from '@Angular/forms'; ````. Después tendremos que añadir a los imports el **FormsModule**.
+Vamos a empezar importando las librerías que necesitamos para escribir los formularios con Angular. Entonces, nos vamos a ir a */src/app/app.module.ts*. Concretamente vamos a importar **FormsModule** tal que así: ````import{FormsModule} from '@angular/forms'; ````. Después tendremos que añadir a los imports el **FormsModule**.
 
 ![*Import*](./fotosAngular/2.PNG)
 
